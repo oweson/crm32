@@ -428,7 +428,8 @@
 		}
 		function updateCustomer() {
 			$.post("<%=basePath%>customer/update.action",$("#edit_customer_form").serialize(),function(data){
-				alert("客户信息更新成功！");
+				if(date==0){
+				alert("客户信息更新成功！");}
 				window.location.reload();
 			});
 		}
